@@ -19,15 +19,16 @@ interface HtmlProps {
   headComponents: any;
 }
 
-// Use `module.exports` to be compliante with `webpack-require` import method
-module.exports = React.createClass<HtmlProps, void>({
+// Use `module.exports` to be compliante with `webpack-require` import metho
+class Html extends React.Component<HtmlProps, void> {
   render() {
-    const css = (process.env.NODE_ENV === `production`) ?
-      <style
-        id="gatsby-inlined-css"
-        dangerouslySetInnerHTML={{ __html: styles }}
-      />
-      : null;
+    const css =
+      process.env.NODE_ENV === `production` ? (
+        <style
+          id="gatsby-inlined-css"
+          dangerouslySetInnerHTML={{ __html: styles }}
+        />
+      ) : null;
 
     return (
       <html lang="en">
@@ -51,5 +52,6 @@ module.exports = React.createClass<HtmlProps, void>({
         </body>
       </html>
     );
-  },
-});
+  }
+}
+module.exports = Html;
