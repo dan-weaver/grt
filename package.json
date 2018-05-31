@@ -7,7 +7,8 @@
   "scripts": {
     "start": "gatsby develop",
     "develop": "gatsby develop",
-    "build": "gatsby build"
+    "build": "gatsby build",
+    "cosmos": "cosmos"
   },
   "dependencies": {
     "@types/node": "^8.0.7",
@@ -17,6 +18,8 @@
     "gatsby-link": "latest",
     "gatsby-plugin-react-next": "^1.0.11",
     "gatsby-plugin-typescript": "latest",
+    "html-webpack-plugin": "^3.2.0",
+    "react-cosmos": "^4.4.0",
     "rebass": "^1.0.7"
   }
 }
